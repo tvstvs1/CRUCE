@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirigiendo...</title>
+    <script>
+        // Definir la lista de enlaces
+        const links = {
+            "link111": "https://drive.google.com/file/d/1yoaN4zy2a2ur8MU-_QeQHZQh7C_TAV1o",
+            "link222": "https://drive.google.com/file/d/EXAMPLE2",
+            // Agrega más enlaces aquí
+        };
+
+        // Obtener el parámetro de la URL
+        const path = window.location.pathname.replace("/", ""); 
+
+        // Verificar si hay una redirección disponible
+        if (links[path]) {
+            window.location.href = links[path]; // Redirige al usuario
+        } else {
+            document.write("<h1>Enlace no encontrado</h1>");
+        }
+    </script>
+</head>
+<body>
+    <h1>Redirigiendo...</h1>
+</body>
+</html>
